@@ -15,7 +15,7 @@
 | Decorator Type        | Decorator Factory Method Definition                                     |
 |-----------------------|--------------------------------------------------------------------------|
 | `Class Decorator`     | function classDecorator<T extends { new (...args: any[]): {} }>(constructor: T): T |
-| `Property Decorator`  | function propertyDecorator(target: Object, propertyKey: string | symbol): void  |
-| `Method Decorator`    | function methodDecorator(target: Object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<any>): void |
-| `Accessor Decorator`  | function accessorDecorator(target: Object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<any>): void |
-| `Parameter Decorator` | function parameterDecorator(target: Object, propertyKey: string | symbol, parameterIndex: number): void |
+| `Property Decorator`  | function propertyDecorator(target: Object, propertyKey: string \\| symbol): void  |
+| `Method Decorator`    | function methodDecorator(target: Object, propertyKey: string \\| symbol, descriptor: TypedPropertyDescriptor<any>): void |
+| `Accessor Decorator`  | function accessorDecorator(target: Object, propertyKey: string \\| symbol, descriptor: TypedPropertyDescriptor<any>): void |
+| `Parameter Decorator` | function parameterDecorator(target: Object, propertyKey: string \\| symbol, parameterIndex: number): void |
