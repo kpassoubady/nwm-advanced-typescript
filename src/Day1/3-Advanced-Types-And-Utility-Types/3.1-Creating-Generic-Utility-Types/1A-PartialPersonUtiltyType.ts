@@ -9,11 +9,12 @@ interface Person {
   };
 }
 
+// You can cast an object to a type using the as keyword
 // let person: Person = {} as Person;
 // let personWithoutAddress:Person = {
 //   name: "Kangs",
 //   age: 30
-// };
+// } as Person;
 // console.log(personWithoutAddress);
 // Property 'address' is missing in type '{ name: string; age: number; }' but required in type 'Person'.ts(2741)
 
