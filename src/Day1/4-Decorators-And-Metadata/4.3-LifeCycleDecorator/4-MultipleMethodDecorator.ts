@@ -32,8 +32,16 @@ class AnotherExample {
   compute(a: number, b: number): number {
       return a + b;
   }
+
+  @Time
+  @Log
+  subtract(a: number, b: number): number {
+      return a - b;
+  }
 }
 
 const example = new AnotherExample();
 example.compute(3, 4);
+example.subtract(10, 5);
+
 

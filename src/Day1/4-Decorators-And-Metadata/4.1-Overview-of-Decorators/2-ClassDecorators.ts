@@ -9,3 +9,8 @@ function ClassDecorator(target: Function) {
 class House {
   // Class implementation
 }
+
+@ClassDecorator
+class Mouse {
+  // Class implementation
+}

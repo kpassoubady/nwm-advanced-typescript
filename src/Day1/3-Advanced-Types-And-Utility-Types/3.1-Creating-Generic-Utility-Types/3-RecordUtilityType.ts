@@ -5,12 +5,12 @@ type Point = {
     y: number;
 };
 
-type PointMap = Record<string, Point>;
+type PointMap = Record<string, Point|undefined>;
 
 let points: PointMap = {
-    "a": { x: 1, y: 2 },
-    "b": { x: 3, y: 4 },
-    "c": { x: 5, y: 6 },
+    "apple": { x: 1, y: 2 },
+    "banana": { x: 3, y: 4 },
+    "cherry": { x: 5, y: 6 },
    // "d": { x: "5", y: "6"},
 };
 

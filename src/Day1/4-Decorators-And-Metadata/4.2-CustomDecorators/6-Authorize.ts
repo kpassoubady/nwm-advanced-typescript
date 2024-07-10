@@ -15,8 +15,6 @@ function Authorize(role: string) {
   };
 }
 
-let currentUserRole = 'admin';
-
 class SecureClass {
   @Authorize('admin')
   secureMethod() {
@@ -24,6 +22,8 @@ class SecureClass {
   }
 }
 
+
+let currentUserRole = 'admin';
 const secureInstance = new SecureClass();
 try {
   secureInstance.secureMethod();

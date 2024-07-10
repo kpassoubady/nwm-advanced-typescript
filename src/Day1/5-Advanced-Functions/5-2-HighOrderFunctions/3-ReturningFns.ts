@@ -2,8 +2,10 @@ export {};
 
 // Higher-order function that returns a function
 function createMultiplier(factor: number): (value: number) => number {
+  console.log("Factor:", factor);
   return function (value: number) {
-      return value * factor;
+    console.log("Value:", value);
+    return value * factor;
   };
 }
 

@@ -1,5 +1,9 @@
+export {};
+
 function processInput(input: string): void;
 function processInput(input: number): void;
+
+
 function processInput(input: string | number): void {
     if (typeof input === "string") {
         // Process string input

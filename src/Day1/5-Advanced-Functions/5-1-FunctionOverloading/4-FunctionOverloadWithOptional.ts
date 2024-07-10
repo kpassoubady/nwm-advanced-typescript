@@ -1,3 +1,5 @@
+export {}
+
 function greet(name: string): string;
 function greet(name: string, greeting: string): string;
 function greet(name: string, greeting: string, age?: number): string;
