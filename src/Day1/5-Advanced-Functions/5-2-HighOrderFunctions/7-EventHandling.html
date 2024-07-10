@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Event Handling with Higher-Order Functions</title>
+</head>
+
+<body>
+  <h1>Event Handling with Higher-Order Functions</h1>
+  <button id="myButton">Click Me</button>
+  <script>
+    // Button element
+    const button = document.getElementById('myButton');
+
+    // The handleClick function is a higher-order function that takes 
+    // another function callback as an argument
+
+    // When the button is clicked, the handleClick function alerts button clicked message 
+    // and then calls the callback function that was passed as an argument.
+
+    // Function to handle click events
+    // The handleClick function is a higher-order function, which means it takes another function as an argument. 
+    // This function is responsible for attaching a click event listener to the button
+    function handleClick(callback) {
+      // The ?. is an optional chaining operator, 
+      // which ensures that the code doesn't throw an error if the button is null or undefined.
+      button?.addEventListener('click', () => {
+        alert('Button clicked');
+        callback();
+      });
+    }
+
+    // Function to be called on button click
+    function showMessage() {
+      const messageElement = document.createElement('p');
+      messageElement.textContent = 'This is a message ';
+      document.body.appendChild(messageElement);
+    }
+
+
+    // Function to be called on button click which shows the date along with a message
+    function showMessageWithDate() {
+      const messageElement = document.createElement('p');
+      messageElement.textContent = 'This is a message ' + new Date();
+      document.body.appendChild(messageElement);
+    }
+
+    // Pass the showMessage function as an argument to handleClick
+    // handleClick(showMessage);
+    // The showMessage function is passed as an argument to handleClick, 
+    // registering it as the callback to be executed when the button is clicked.
+    handleClick(showMessageWithDate);
+  </script>
+</body>
+
+</html>

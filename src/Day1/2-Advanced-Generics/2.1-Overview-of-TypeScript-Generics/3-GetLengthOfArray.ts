@@ -1,0 +1,9 @@
+export { };
+
+function getLengthOfArray<T>(arg: T[]): T[] {
+  console.log(arg.length);
+  return arg;
+}
+
+let myArr = getLengthOfArray<number>([1, 2, 3, 4, 5]); // Output: 5
+let myString = getLengthOfArray<string>(["1", "2", "3", "4", "5", "6"]); // Output: 6
