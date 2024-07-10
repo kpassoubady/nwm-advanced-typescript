@@ -30,3 +30,7 @@ numberArray.push(1);
 numberArray.push(2);
 console.log(numberArray.pop()); // Output: 2
 
+const booleanArray = new MyArray<boolean>();
+// booleanArray.push(1); // Type checking allows only boolean values
+booleanArray.push(true);
+
