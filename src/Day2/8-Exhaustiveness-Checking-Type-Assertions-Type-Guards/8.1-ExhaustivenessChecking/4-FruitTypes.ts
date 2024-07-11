@@ -22,9 +22,11 @@ function getFruitMessage(fruit: Fruit): string {
 let fruit1 : Fruit = 'apple';
 let fruit2 : Fruit = 'banana';
 let fruit3 : Fruit = 'orange';
-//let fruit4 : Fruit = 'blueberry';
+// let fruit4 : Fruit = 'blueberry'; 
+// Type '"blueberry"' is not assignable to type 'Fruit'.ts(2322)
+
 
 console.log(getFruitMessage(fruit1));
 console.log(getFruitMessage(fruit2));
 console.log(getFruitMessage(fruit3));
-//console.log(getFruitMessage(fruit4));
+// console.log(getFruitMessage(fruit4));

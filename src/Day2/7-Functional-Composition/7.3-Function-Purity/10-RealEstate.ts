@@ -12,7 +12,7 @@ function updatePropertyPrice(listing: PropertyListing, newPrice: number): Proper
 
 const listing: PropertyListing = {
   id: '123',
-  address: '123 Main St',
+  address: '123 Main St, Springfield, IL',
   price: 100000,
 };
 

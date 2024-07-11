@@ -7,7 +7,7 @@ function upCase(value: string | null | undefined) {
     } else {
         console.log("Value is null or undefined.");
     }
-}
+} 
 
 upCase("kangs");
 upCase(null);

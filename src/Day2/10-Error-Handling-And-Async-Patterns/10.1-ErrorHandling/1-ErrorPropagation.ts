@@ -19,7 +19,7 @@ console.log("Result1:", result1);
 try {
   const result2 = divide(10, 0);
   console.log("Result2:", result2);
-} catch (error:any) {
+} catch (error) {
   // Handle the error
   console.error("Error:", (error as Error).message);
 }

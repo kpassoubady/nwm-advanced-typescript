@@ -22,8 +22,10 @@ function getSound(animal: Animal): string {
 let cat1: Animal = { name: 'catherine', type: 'cat' };
 let dog1: Animal = { type: 'dog', breed: 'milton' };
 let bird1: Animal = { type: 'bird', species: 'peacock' }
+let bird2: Animal = { type: 'bird', species: 'crow' }
 
 console.log(getSound(cat1));
 console.log(getSound(dog1));
 console.log(getSound(bird1));
+console.log(getSound(bird2));
 

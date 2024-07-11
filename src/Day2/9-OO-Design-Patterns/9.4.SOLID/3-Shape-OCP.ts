@@ -11,6 +11,7 @@ The Shape interface and its implementations (Rectangle and Circle) are open for 
 // Example: Open/Closed Principle (OCP)
 interface Shape {
   calculateArea(): number;
+  //calculatePerimeter(): number;
 }
 
 class Rectangle implements Shape {

@@ -13,6 +13,7 @@ class Person {
 }
 
 const person = new Person("John");
+person.greet();
 (person as any).name = "Jane";
 person.greet(); 
 // output: "Hello, my name is Jane"

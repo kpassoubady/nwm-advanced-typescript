@@ -9,25 +9,28 @@ interface Engine {
   start(): void;
 }
 
-// Concrete Products
+// Concrete Car
 class Car implements Vehicle {
   drive() {
       console.log("Driving a car...");
   }
 }
 
+// Concrete Truck
 class Truck implements Vehicle {
   drive() {
       console.log("Driving a truck...");
   }
 }
 
+// Concrete PetrolEngine
 class PetrolEngine implements Engine {
   start() {
       console.log("Starting petrol engine...");
   }
 }
 
+// Concrete DieselEngine
 class DieselEngine implements Engine {
   start() {
       console.log("Starting diesel engine...");

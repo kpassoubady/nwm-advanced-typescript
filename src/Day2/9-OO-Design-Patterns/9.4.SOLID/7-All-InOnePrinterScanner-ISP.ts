@@ -17,12 +17,20 @@ interface Scanner {
   scan(): void;
 }
 
-class AllInOnePrinterScanner implements Printer, Scanner {
+interface FaxMachine {
+  fax(): void;
+}
+
+class AllInOnePrinterScanner implements Printer, Scanner, FaxMachine {
   print(): void {
       // Logic to print document
   }
 
   scan(): void {
       // Logic to scan document
+  }
+
+  fax(): void {
+      // Logic to fax document
   }
 }
