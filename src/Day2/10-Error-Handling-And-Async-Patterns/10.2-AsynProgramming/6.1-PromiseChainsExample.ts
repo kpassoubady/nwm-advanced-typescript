@@ -35,50 +35,50 @@ function debitAmount(creditCardNumber: number): Promise<string> {
 // Example: Chaining Promises for buying gasoline
 async function buyGasoline(creditCardNumber: number) {
   try {
-    console.log('Ordering gasoline...');
+    console.log('Ordering gasoline using...' + creditCardNumber);
     const orderResult = await orderGasoline();
     console.log(orderResult);
 
-    console.log('Checking fuel level...');
+    console.log('Checking fuel level...' + creditCardNumber);
     const fuelCheckResult = await checkFuelLevel();
     console.log(fuelCheckResult);
 
-    console.log('Debiting the amount from the credit card...');
+    console.log('Debiting the amount from the credit card...' + creditCardNumber);
     const debitResult = await debitAmount(creditCardNumber);
     console.log(debitResult);
 
-    console.log('Gasoline purchase complete!');
+    console.log('Gasoline purchase complete!' + creditCardNumber);
   } catch (error) {
-    console.error(error);
+    console.error(error + " " + creditCardNumber);
   }
 }
 
 function buyGasolineUsingThen(creditCardNumber: number) {
-  console.log('Ordering gasoline...');
+  console.log('Ordering gasoline using...' + creditCardNumber);
   orderGasoline()
     .then((orderResult) => {
       console.log(orderResult);
-      console.log('Checking fuel level...');
+      console.log('Checking fuel level...' + creditCardNumber);
       return checkFuelLevel();
     })
     .then((fuelCheckResult) => {
       console.log(fuelCheckResult);
-      console.log('Debiting the amount from the credit card...');
+      console.log('Debiting the amount from the credit card...' + creditCardNumber);
       return debitAmount(creditCardNumber);
     })
     .then((debitResult) => {
       console.log(debitResult);
-      console.log('Gasoline purchase complete!');
+      console.log('Gasoline purchase complete!' + creditCardNumber);
     })
     .catch((error) => {
-      console.error(error);
+      console.error(error + " " + creditCardNumber);
     });
 }
 
 
-//const creditCardNumber = 6666777788889999; 
-//buyGasolineUsingThen(creditCardNumber)
-const debitCardNumber = 1222777788889999; 
+const creditCardNumber = 6666777788889999;
+buyGasolineUsingThen(creditCardNumber)
+const debitCardNumber = 1222777788889999;
 buyGasoline(debitCardNumber);
 
 
