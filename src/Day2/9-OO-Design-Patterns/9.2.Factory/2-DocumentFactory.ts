@@ -1,3 +1,5 @@
+export {}
+
 // Real-life situation using Factory pattern for document creation
 interface Document {
   create(): void;

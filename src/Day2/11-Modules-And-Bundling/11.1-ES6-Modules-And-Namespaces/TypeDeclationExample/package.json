@@ -1,0 +1,23 @@
+{
+  "name": "typedeclations",
+  "version": "1.0.0",
+  "description": "TS learning examples",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "TypeScript",
+    "Examples",
+    "Learning",
+    "Basic",
+    "Language"
+  ],
+  "types": "math.d.ts",
+  "author": "Kangeyan Passoubady",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.6.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}

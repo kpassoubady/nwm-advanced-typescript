@@ -5,6 +5,10 @@
     "outDir": "build",
     "noEmitOnError": true,
     "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": false,
+    "target": "ES2021",
+    "lib": ["ES2021","dom"], 
   },
   "include": [
     "src/**/*.ts",
