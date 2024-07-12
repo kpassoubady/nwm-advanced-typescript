@@ -8,13 +8,13 @@
     - [Types](#types)
       - [Pros:](#pros-1)
       - [Cons:](#cons-1)
-      - [Classes](#classes)
+    - [Classes](#classes)
       - [Pros:](#pros-2)
       - [Cons:](#cons-2)
   - [Interface Example](#interface-example)
-  - [Features Demonstrated for types:](#features-demonstrated-for-types)
+  - [Features Demonstrated for Interface:](#features-demonstrated-for-interface)
   - [Type Example:](#type-example)
-  - [Features Demonstrated for Types:](#features-demonstrated-for-types-1)
+  - [Features Demonstrated for Types:](#features-demonstrated-for-types)
   - [Class example:](#class-example)
   - [Features Demonstrated for class:](#features-demonstrated-for-class)
 
@@ -66,7 +66,7 @@
 1. No declaration merging: Cannot declare the same type name multiple times to merge them.
 2. Less intuitive for some OOP patterns: Interfaces often fit better with traditional OOP patterns.
 
-#### Classes
+### Classes
 #### Pros:
 
 1. Encapsulation and Inheritance: Supports encapsulation and inheritance, allowing for well-structured and reusable code.
@@ -193,7 +193,7 @@ const myBook: Book = {
 console.log(myBook);
 
 ```
-## Features Demonstrated for types:
+## Features Demonstrated for Interface:
 
 1. Basic Interface Definition:
 interface Person defines properties and method signatures.
