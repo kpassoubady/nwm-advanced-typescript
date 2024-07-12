@@ -2,6 +2,7 @@
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
     "@types/lodash": "^4.14.192",
     "@types/node": "^14.11.2",
     "@types/react": "^18.3.3",
@@ -10,10 +11,12 @@
     "express": "^4.19.2",
     "gts": "^3.1.1",
     "immutable": "^4.3.6",
+    "jest": "^29.7.0",
     "lodash": "^4.17.21",
     "nodemon": "^3.1.4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "ts-jest": "^29.2.2"
   },
   "scripts": {
     "lint": "gts lint",
@@ -23,7 +26,8 @@
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run lint",
-    "serve": "nodemon src/Day2/10-Error-Handling-And-Async-Patterns/10.1-ErrorHandling/2-ErrorHandlingWebServer.ts"
+    "serve": "nodemon src/Day2/10-Error-Handling-And-Async-Patterns/10.1-ErrorHandling/2-ErrorHandlingWebServer.ts",
+    "test": "jest"
   },
   "dependencies": {
     "ts-node": "^10.9.2",
