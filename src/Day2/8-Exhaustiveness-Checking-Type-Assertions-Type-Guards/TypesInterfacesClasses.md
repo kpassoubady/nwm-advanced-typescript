@@ -12,7 +12,9 @@
       - [Pros:](#pros-2)
       - [Cons:](#cons-2)
   - [Interface Example](#interface-example)
+  - [Features Demonstrated for types:](#features-demonstrated-for-types)
   - [Type Example:](#type-example)
+  - [Features Demonstrated for Types:](#features-demonstrated-for-types-1)
   - [Class example:](#class-example)
   - [Features Demonstrated for class:](#features-demonstrated-for-class)
 
@@ -84,28 +86,144 @@
 ## Interface Example
 
 ```js
+// Basic interface definition
 interface Person {
+  id: number;
   name: string;
   age: number;
+  email?: string; // Optional property
+  readonly ssn: string; // Readonly property
+
+  // Method signature
+  greet(): void;
 }
 
-// Extending an interface
+// Interface inheritance
 interface Employee extends Person {
   employeeId: number;
+  department: string;
 }
 
-// Declaration Merging
-interface Person {
-  address?: string;
+// Index signatures
+interface StringArray {
+  [index: number]: string;
 }
 
-const employee: Employee = {
-  name: "Alice",
-  age: 30,
-  employeeId: 123,
-  address: "123 Main St"
+// Function types
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+
+// Hybrid types
+interface Counter {
+  (start: number): string;
+  interval: number;
+  reset(): void;
+}
+
+// Declaration merging
+interface Book {
+  title: string;
+  author: string;
+}
+
+interface Book {
+  publishedYear: number;
+}
+
+// Implementing an interface
+class Developer implements Employee {
+  id: number;
+  name: string;
+  age: number;
+  ssn: string;
+  employeeId: number;
+  department: string;
+
+  constructor(id: number, name: string, age: number, ssn: string, employeeId: number, department: string) {
+    this.id = id;
+    this.name = name;
+    this.age = age;
+    this.ssn = ssn;
+    this.employeeId = employeeId;
+    this.department = department;
+  }
+
+  greet() {
+    console.log(`Hello, my name is ${this.name} and I work in the ${this.department} department.`);
+  }
+}
+
+// Using an index signature
+const myArray: StringArray = ["Alice", "Bob", "Charlie"];
+console.log(myArray[1]); // Output: Bob
+
+// Using a function type
+const mySearch: SearchFunc = function (source: string, subString: string): boolean {
+  return source.includes(subString);
 };
+
+console.log(mySearch("Hello, world", "world")); // Output: true
+
+// Using a hybrid type
+function getCounter(): Counter {
+  const counter = (function (start: number) {
+    console.log(`Counter started at: ${start}`);
+    return `Counter started at: ${start}`;
+  }) as Counter;
+  counter.interval = 123;
+  counter.reset = function () {
+    console.log("Counter reset");
+  };
+  return counter;
+}
+
+const counter = getCounter();
+counter(10); // Output: Counter started at: 10
+counter.reset(); // Output: Counter reset
+console.log(counter.interval); // Output: 123
+
+// Using declaration merging
+const myBook: Book = {
+  title: "TypeScript Handbook",
+  author: "TypeScript Team",
+  publishedYear: 2021
+};
+
+console.log(myBook);
+
 ```
+## Features Demonstrated for types:
+
+1. Basic Interface Definition:
+interface Person defines properties and method signatures.
+
+2. Optional Properties:
+email?: string shows how to define optional properties.
+
+3. Readonly Properties:
+readonly ssn: string demonstrates the use of readonly properties.
+
+4. Method Signatures:
+greet(): void defines a method signature within the interface.
+
+5. Interface Inheritance:
+interface Employee extends Person shows how to extend interfaces.
+
+6. Index Signatures:
+interface StringArray demonstrates how to define index signatures.
+
+7. Function Types:
+interface SearchFunc shows how to define function types.
+
+8. Hybrid Types:
+interface Counter combines callable and object properties.
+
+9. Declaration Merging:
+Two interface Book declarations merge into a single interface.
+
+10. Implementing an Interface:
+class Developer implements Employee shows how to implement an interface in a class.
 
 ## Type Example:
 
@@ -201,7 +319,30 @@ console.log(`Response: ${successResponse}`);
 console.log(`Error: ${errorResponse}`);
 ```
 
+## Features Demonstrated for Types:
+1. Union Types:
+type ID = number | string; allows ID to be either number or string.
 
+2. Intersection Types:
+type User = UserBase & Timestamps; combines UserBase and Timestamps into a single type.
+
+3. Type Aliases:
+type Point = { x: number; y: number; }; creates an alias for the Point type.
+
+4. Utility Types:
+Partial, Required, Readonly applied to User.
+
+5. Advanced Type Manipulation:
+Exclude, Extract, NonNullable used to manipulate types.
+
+6. Mapped Types:
+type ApiResponse<T> = { [P in keyof T]: T[P]; }; transforms properties of a type.
+
+7. Type Guards:
+isString function to check if a value is a string.
+
+8. Type Assertions:
+(someValue as string).length; asserts someValue is a string.
 
 
 ## Class example:
