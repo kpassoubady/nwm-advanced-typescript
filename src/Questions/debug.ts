@@ -1,3 +1,5 @@
+// -node --inspect program.js
+// node --inspect-brk program.js  -- attach debugger
 
 for (let i = 0; i < 5; i++) {
   console.log(`Iteration: ${i}`);
