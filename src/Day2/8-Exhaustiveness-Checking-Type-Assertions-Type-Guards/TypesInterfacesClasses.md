@@ -1,27 +1,26 @@
 # Class Vs Types Vs Interfaces
 
 - [Class Vs Types Vs Interfaces](#class-vs-types-vs-interfaces)
-  - [Pros:](#pros)
-  - [Cons:](#cons)
+  - [Class Vs Types Vs Interfaces Features  :](#class-vs-types-vs-interfaces-features--)
     - [Interfaces](#interfaces)
-      - [Pros:](#pros-1)
-    - [Cons:](#cons-1)
+      - [Pros:](#pros)
+    - [Cons:](#cons)
     - [Types](#types)
+      - [Pros:](#pros-1)
+      - [Cons:](#cons-1)
+      - [Classes](#classes)
       - [Pros:](#pros-2)
       - [Cons:](#cons-2)
-      - [Classes](#classes)
-      - [Pros:](#pros-3)
-      - [Cons:](#cons-3)
   - [Interface Example](#interface-example)
   - [Type Example:](#type-example)
   - [Class example:](#class-example)
   - [Features Demonstrated for class:](#features-demonstrated-for-class)
 
 
-## Pros: 
+## Class Vs Types Vs Interfaces Features  : 
 | Feature                   | Classes                                                                                     | Types                                                                                           | Interfaces                                                                                     |
 |---------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| **Inheritance**           | Supports inheritance and method definitions.                                                | Can use intersections and unions for composition but not inheritance.                          | Supports inheritance through `extends` keyword.                                                |
+| **Inheritance**           | Supports inheritance and method definitions.                                                | Can use intersections and unions for composition but not inheritance.                           | Supports inheritance through `extends` keyword.                                                |
 | **Methods**               | Can define methods directly within the class.                                               | Cannot define methods directly within the type alias.                                           | Cannot define methods directly but can define function signatures.                            |
 | **Modifiers**             | Supports access modifiers (public, private, protected).                                     | Does not support access modifiers.                                                              | Does not support access modifiers.                                                             |
 | **Instance Creation**     | Can create instances using the `new` keyword.                                               | Cannot create instances directly.                                                               | Cannot create instances directly.                                                              |
@@ -30,19 +29,16 @@
 | **Readability**           | Often more readable and understandable, especially for OOP patterns.                        | Flexible and concise for simple type definitions.                                               | More intuitive and readable for defining object shapes and extending types.                    |
 | **Type Guards**           | Can use `instanceof` for type guards.                                                       | Can use custom type guards.                                                                     | Can use custom type guards.                                                                    |
 | **Tooling Support**       | Good tooling support in most editors.                                                       | Good tooling support in most editors.                                                           | Good tooling support in most editors.                                                          |
-
-## Cons:
-
-| Feature                   | Classes                                                                                     | Types                                                                                           | Interfaces                                                                                     |
-|---------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Union and Intersection Types** | N/A                                                                               | Can easily define union (\|) and intersection (&) types.                                        | N/A                                                                                            |
+| **Flexibility**           | N/A                                                                                         | Can alias any type including primitive types, tuples, and complex expressions.                  | N/A                                                                                            |
+| **Advanced Type Manipulation** | N/A                                                                                   | Can be used with mapped types and conditional types more flexibly.                              | N/A                                                                                            |
 | **Verbosity**             | Can be more verbose compared to types and interfaces.                                       | Less verbose but can be complex for advanced type manipulations.                                | Less verbose but can become complex with multiple extensions.                                  |
 | **Composition**           | Less flexible for composing multiple types.                                                 | Very flexible with unions and intersections.                                                    | Flexible with multiple inheritance but not as much as type intersections.                      |
-| **Declaration Merging**   | Not supported.                                                                              | Not supported.                                                                                  | Supported, which can lead to unintentional property conflicts.                                 |
-| **Type Manipulation**     | Not as flexible as types for advanced type manipulations (e.g., mapped types).              | Extremely flexible for advanced type manipulations.                                             | Less flexible compared to types for advanced type manipulations.                               |
 | **Utility Types**         | Cannot use TypeScript utility types directly.                                               | Can leverage TypeScript utility types like `Partial`, `Pick`, `Omit`, etc.                      | Can leverage TypeScript utility types but less intuitive for certain manipulations.            |
 | **Instance Methods**      | Requires more boilerplate code to define methods.                                           | Cannot define instance methods directly.                                                        | Cannot define instance methods directly, only function signatures.                             |
-| **Static Typing**         | Tied to runtime constructs, which can be limiting.                                           | Purely compile-time constructs, offering more flexibility.                                      | Purely compile-time constructs, offering more flexibility.                                     |
+| **Static Typing**         | Tied to runtime constructs, which can be limiting.                                          | Purely compile-time constructs, offering more flexibility.                                      | Purely compile-time constructs, offering more flexibility.                                     |
 | **Complexity**            | Can become complex and difficult to manage with deep inheritance hierarchies.               | Can become complex with advanced type manipulations.                                            | Can become complex with extensive multiple inheritance.                                        |
+| **OOP Patterns**          | Fits well with traditional OOP patterns.                                                    | Less intuitive for some OOP patterns.                                                           | Often fits better with traditional OOP patterns.                                               |
 
 
 ### Interfaces
