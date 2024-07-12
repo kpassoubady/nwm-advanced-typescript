@@ -1,5 +1,23 @@
 # Class Vs Types Vs Interfaces
 
+- [Class Vs Types Vs Interfaces](#class-vs-types-vs-interfaces)
+  - [Pros:](#pros)
+  - [Cons:](#cons)
+    - [Interfaces](#interfaces)
+      - [Pros:](#pros-1)
+    - [Cons:](#cons-1)
+    - [Types](#types)
+      - [Pros:](#pros-2)
+      - [Cons:](#cons-2)
+      - [Classes](#classes)
+      - [Pros:](#pros-3)
+      - [Cons:](#cons-3)
+  - [Interface Example](#interface-example)
+  - [Type Example:](#type-example)
+  - [Class example:](#class-example)
+  - [Features Demonstrated for class:](#features-demonstrated-for-class)
+
+
 ## Pros: 
 | Feature                   | Classes                                                                                     | Types                                                                                           | Interfaces                                                                                     |
 |---------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
