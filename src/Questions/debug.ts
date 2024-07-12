@@ -1,9 +1,10 @@
-// -node --inspect program.js
-// node --inspect-brk program.js  -- attach debugger
+// node --inspect build/src/Questions/debug.js
+// node --inspect-brk build/src/Questions/debug.js  -- attach debugger
 
 for (let i = 0; i < 5; i++) {
   console.log(`Iteration: ${i}`);
 }
+
 
 const array = [10, 20, 30, 40];
 for (const value of array) {
