@@ -22,7 +22,7 @@ describe('first test suite', () => {
   test('test8', () => {
     expect(() => { throw new Error('error') }).toThrow('error')
   })
-  test('test9', () => {
+  test.skip('test9', () => {
     expect(true).toBe(true)
   })
   test('test10', () => {

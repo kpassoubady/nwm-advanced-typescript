@@ -17,6 +17,6 @@ describe('test suite', () => {
     console.log('afterEach')
   })
   test('test1', () => {
-    console.log('test1')
+    console.log('hello this is my first test')
   })
 });

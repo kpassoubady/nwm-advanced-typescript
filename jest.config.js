@@ -6,7 +6,7 @@ module.exports = {
   },
   collectCoverage: true,
   coverageDirectory: 'coverage',  
-  coverageReporters: ['json', 'lcov', 'text', 'clover'],
+  coverageReporters: ['json', 'lcov', 'text', 'clover','html'],
   collectCoverageFrom: [
     'src/Day2/12-Advanced-Testing-Strategies/src/*.ts',
     '!src/**/index.ts',
